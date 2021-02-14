@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* eje Y arriba, abajo; eje X der izq */
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    /* width  anchura*/
+    width: 1200px;
+    /* margin margenes externas */
+    /* primer valor Y, segundo valor X */
+    margin: 0 auto;
+    /* max width 100% evita generar scroll horizontal, 
+    se adapta a la pantalla en caso de ser menor que width */
+    max-width: 100%;
+}
+
+
+/* inicio header */
+header{
+    width: 100%;
+    position: relative;
+    display: block;
+    background: url(../img/bg-header.png);
+    background-size: cover;
+    padding-bottom: 120px;
+}
+
+header #navbar{
+    display: flex;
+    /* space between pone los elementos en los bordes
+    space around divide igual los espacios */
+    /* justify content alinea los elementos en el eje X */
+    justify-content: space-between ;
+    /* align-items alinea los elementos en el eje Y */
+    padding: 40px 0;
+}
+
+header #navbar #logo a img{
+    transition: .3s;
+    margin-left: 10px;
+}
+
+header #navbar #logo a img:hover{
+    transform: translateX(20px);
+}
+
+header #navbar #menu{
+    display: flex;
+    align-items: center;
+}
+
+header #navbar #menu ul{
+    /* margin margen externa */
+    margin: 0;
+    /* padding margen interna */
+    padding: 0;
+    display: flex;
+}
+
+header #navbar #menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+header #navbar #menu ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    transition: .3s;
+    padding: 2px 0px;
+}
+
+header #navbar #menu ul li a:hover{
+    border-bottom: 2px solid #ffffff;
+}
+
+header #info-header{
+    text-align: center;
+    margin-top: 150px;
+}
+
+header #info-header img{
+    transition: .5s;
+}
+
+header #info-header img:hover{
+    transform: rotate(360deg);
+}
+
+
+header #info-header h1{
+    color: #e8f00c;
+    font-size: 45px;
+    margin: 0;
+}
+
+header #info-header h2{
+    color: #ffffff;
+    margin: 0;
+}
+
+header #info-header button{
+    background: #e8f00c;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    color: #999;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+/* fin header */
+
+
+/* inicio planes */
+#planes {
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 60px 0;
+}
+
+#planes h2{
+    font-size: 30px;
+}
+
+#planes .row{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#planes .row .card-plan{
+    /* position:relative genera en la caja una margen, para que los
+    objetos absolute no se salgan de la caja*/
+    position: relative;
+}
+
+#planes .row .card-plan h3{
+    color: #e8f00c;
+    font-size: 25px;
+    font-weight:400;
+    top: 95px;
+    left: 0;
+    right: 0;
+    text-align: center ;
+    /* position:absolute desbloque la opción de mover el objeto
+    dentro de la posicisión relativa de la caja que lo contiene */
+    position: absolute;
+    transition: .3s;
+}
+
+#planes .row .card-plan:hover h3{
+    font-size: 30px;
+    top: 80px;
+}
+
+
+#planes .row .card-plan img{
+    transition: .3s;
+}
+
+#planes .row .card-plan:hover img{
+    border-radius: 50%;
+}
+
+/* fin planes */
+
+
+/* inicio destino */
+#destino{
+    width: 100%;
+    position: relative;
+    display: block;
+    background: url(../img/bg-destinos.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#destino h2{
+    padding-top: 220px;
+    color: #e8f00c;
+    text-align: center;
+    font-size: 30px;
+}
+
+#destino .row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#destino .row .card-destin{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#destino .row .card-destin h3{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+/* fin destino */
+
+
+/* inicio contacto */
+#contacto{
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: center;
+    background: #e8f00c;
+}
+
+#contacto h2{
+    font-size: 30px;
+    margin: 0;
+    padding-top: 80px;
+}
+
+#contacto button{
+    margin-bottom: 80px;
+    margin-top: 30px;
+    padding: 5px 30px;
+    border-style: none;
+    color: #ffffff;
+    background: #00000075;
+    border-radius: 4px;
+}
+
+#contacto form{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+#contacto form select{
+    padding: 0 25px;
+}
+
+/* fin contacto */
+
+
+/* inicio footer */
+footer{
+    width: 100%;
+    position: relative;
+    display: block;
+    background: #000;
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer p{
+    margin: 0;
+    color: #ffffff;
+    padding: 10px;
+}
+/* fin footer */
